@@ -1,11 +1,78 @@
+
 .header{
-    width:100%;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(247, 214, 241);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px;
+    height: 175px;
+    width:98%;
+    color: white;
+    background-color: rgba(238, 148, 246, 0.819);
     font-size: x-large;
 }
 .main_col{
-    width: 100%;
-    height: 200px;
+    background-image: url("yritystausta.jpg");
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    width: 98%;
+    height: auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 0,0,0,0;
     
+}
+button {
+    background: #fa52fa;
+    background-image: -webkit-linear-gradient(top, #fa52fa, #43a1e8);
+    background-image: -moz-linear-gradient(top, #fa52fa, #43a1e8);
+    background-image: -ms-linear-gradient(top, #fa52fa, #43a1e8);
+    background-image: -o-linear-gradient(top, #fa52fa, #43a1e8);
+    background-image: linear-gradient(to bottom, #fa52fa, #43a1e8);
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 20px 10px 20px;
+    border: solid #000000 1px;
+    text-decoration: none;
+  }
+  
+  button:hover {
+    background: #cf43f2;
+    text-decoration: none;
+  }
+  table {
+    color:rgb(255, 255, 255);
+    margin-left: 7%;
+    margin-top: 3%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    width: 80%;
+    font-family:'Geneva', sans-serif;
+    font-size: large;
+}
+            
+th {
+    background: #fa52fa;
+    background-image: -webkit-linear-gradient(top, #fa52fa78, #43a1e884);
+    background-image: -moz-linear-gradient(top, #fa52fa78, #43a1e884);
+    background-image: -ms-linear-gradient(top, #fa52fa78, #43a1e884);
+    background-image: -o-linear-gradient(top, #fa52fa78, #43a1e884);
+    background-image: linear-gradient(to top, #fa52fa78, #43a1e884);
+    text-align: left;
+    padding: 16px;
+}
+td {
+    color:#000000;
+    text-align: left;
+    padding: 16px;
+}
+tr:nth-child(even) {
+    background-color: rgba(191, 217, 249, 0.319);
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
 }

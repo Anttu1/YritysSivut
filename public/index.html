@@ -2,60 +2,82 @@
 <html lang="fi">
     <head>
         <title>Voikukka Oy</title>
-        <link rel="stylesheet" href="ulkoasu.css">
+        <link 'https://fonts.googleapis.com/css?family=Ewert' rel="stylesheet" href="tyyli.css">
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src = "server.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 
     <body>
         <center> 
         <div class="header">
-           <h1>Voikukka OY</h1>
+           <h1>VOIKUKKA OY</h1>
+           <button onclick="Main()">Pääsivu</button>
+           <button onclick="Info()">Esittely</button>
+           <button onclick="fetchData()">Henkilökunta</button>
+           <button onclick="Contact()">Yhteystiedot</button>
         </div>
-        <div class="main_col">
-        <p id="paasivu"></p>
 
-        <button id="henkilokunta" onclick="fetchData()">Henkilökunta</button>
-        
-        <a id="paasivu"><button>TAKAISIN PÄÄSIVULLE</button></a>
+
+        <div class="main_col">
         </div>
+        <p id="paasivu" target ="main_col"></p>
+        <p id="esittely" target ="main_col"></p>
+        <p id="henkilokunta" target ="main_col"></p>
+        <p id="yhteystiedot" target ="main_col"></p>
         </center>
 
         <script>
-                    //----------------------show elements---------------------------      
-        function showElements() {
-        var hiddenElements = document.getElementsByClassName("hidden")
 
-            for (i=0; i < hiddenElements.length; i++) {
-            hiddenElements[i].style.visibility = "visible"
+         //------------------------Datan haku----------------------------
+        async function fetchData() {
+    
+        var x = `<table><thead><th>Nimi</th><th>Sähköposti</th><th>Puhelinnumero</th></thead></tbody>`
+        
+        try {
+        const response = await fetch("http://localhost:3000/api/henkilokunta")
+        const hkuntadata = await response.json() //muutetaan json => javascript muotoon
 
-            document.getElementById("pin-div").style.visibility = "hidden"
-            }
+        await hkuntadata.map(h => { //loopataan läpi oliot map-funktiolla, h  on 1 henkilökunnan jäsen
+            x += `<tr><td>${h.name}</td><td>${h.email}</td><td>${h.phone}</td></tr>`
+        })
+            //taulukko päätetään ja renderöidään html elementtiin
+        x += `<tbody></table>`
+            document.getElementById("henkilokunta").innerHTML = x
+            document.getElementById("henkilokunta").style.display ="block"
+            document.getElementById("yhteystiedot").style.display="none"
+            document.getElementById("esittely").style.display="none"
+            document.getElementById("paasivu").style.display="none"
+
+
+        //Virhetilanteen hallinta    
+        }catch (error) {
+            console.error("Error fetching data:", error)
         }
+    }
+        function Main() {
+            document.getElementById("paasivu").innerHTML = "<br><h2>Tervetuloa Voikukka OY:n sivuille! <br> Täältä löydät tietoa yrityksestämme ja henkilökunnastamme. </h2>"
+            document.getElementById("paasivu").style.display ="block"
+            document.getElementById("esittely").style.display ="none"
+            document.getElementById("yhteystiedot").style.display ="none"
+            document.getElementById("henkilokunta").style.display ="none"
+        }
+        function Contact() {
+            document.getElementById("yhteystiedot").innerHTML = "<br><h3>Yrityksemme yhteystiedot:</h3>  <h4>Puhelinnumero:</h4> 0400786590 <br><h4> Sähköposti:</h4> voikukkaoy@voikukka.fi <br> <h4>Osoite:</h4> Keskustantie 24, <br> 53920 Lappeenranta"
+            document.getElementById("yhteystiedot").style.display="block"
+            document.getElementById("esittely").style.display ="none"
+            document.getElementById("paasivu").style.display ="none"
+            document.getElementById("henkilokunta").style.display ="none"
 
-            //------------------------Datan haku----------------------------
-            async function fetchData() {
-    
-        //    document.getElementById("henkilokunta").innerHTML = "<h4> Ladataan tietoja... </h4>"
-    
-            var x = `<table><thead><th>id</th><th>Nimi</th><th>Sähköposti</th><th>Puhelinnumero</th></thead></tbody>`
-                
-                try {
-                const response = await fetch("http://localhost:3000/api/henkilokunta")
-                const hkuntadata = await response.json() //muutetaan json => javascript muotoon
-    
-                await hkuntadata.map(h => { //loopataan läpi oliot map-funktiolla, h  on 1 henkilökunnan jäsen
-                    x += `<tr><td>${h.id}</td><td>${h.name}</td><td>${h.email}</td><td>${h.phone}</td></tr>`
-                })
-                    //taulukko päätetään ja renderöidään html elementtiin
-                x += `<tbody></table>`
-                    document.getElementById("henkilokunta").innerHTML = x
-    
-                //Virhetilanteen hallinta    
-                }catch (error) {
-                    console.error("Error fetching data:", error)
-                }
-            }
-            document.getElementById("paasivu").innerHTML = "Tervetuloa Voikukka OY:n sivuille! <br> Täältä löydät tietoa yrityksestämme ja henkilökunnastamme!"
+        }
+        function Info() {
+            document.getElementById("esittely").innerHTML = "<br>Yrityksemme on perustettu v. 2022 ja henkilöstöömme kuuluu 4 kukka-alan ammattilaista. <br><br> Liikkeemme sijaitsee Lappeenrannan keskustassa. <br><br> Meillä on laaja valikoima erilaisia leikkokukkia sekä ruukkukukkia myynnissä paikan päällä. <br><br> Voit myös tilata meiltä malliemme mukaisia kukka-asetelmia. <br><br> Kukka-asetelmien mallit ovat esillä myymälässämme, tulethan piipahtamaan!"
+            document.getElementById("esittely").style.display="block"
+            document.getElementById("yhteystiedot").style.display ="none"
+            document.getElementById("paasivu").style.display ="none"
+            document.getElementById("henkilokunta").style.display ="none"
+
+        }
             </script>
     </body>
 </html>
