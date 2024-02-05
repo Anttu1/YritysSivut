@@ -2,10 +2,9 @@
 <html lang="fi">
     <head>
         <title>Voikukka Oy</title>
-        <link 'https://fonts.googleapis.com/css?family=Ewert' rel="stylesheet" href="tyyli.css">
+        <link rel="stylesheet" href="tyyli.css">
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <script src = "server.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -43,7 +42,7 @@
         })
             //taulukko päätetään ja renderöidään html elementtiin
         x += `<tbody></table>`
-            document.getElementById("henkilokunta").innerHTML = x
+        //    document.getElementById("henkilokunta").innerHTML = x
             document.getElementById("henkilokunta").style.display ="block"
             document.getElementById("yhteystiedot").style.display="none"
             document.getElementById("esittely").style.display="none"
