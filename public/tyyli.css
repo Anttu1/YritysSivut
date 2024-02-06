@@ -1,23 +1,31 @@
 
 .header{
+    background-image: url("yritystausta.jpg");
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 5px;
     height: 175px;
-    width:98%;
+    width:99%;
     color: white;
-    background-color: rgba(238, 148, 246, 0.819);
+    border: solid #000000 1px;
     font-size: x-large;
+    background: #fd65fd;
+    background-image: -webkit-linear-gradient(top, #fa52fa, #43a1e8);
+    background-image: -moz-linear-gradient(top, #fa52fa, #43a1e8);
+    background-image: -ms-linear-gradient(top, #fa52fa, #43a1e8);
+    background-image: -o-linear-gradient(top, #fa52fa, #43a1e8);
+    background-image: linear-gradient(to bottom, #fa52fa, #43a1e8);
 }
-.main_col{
-    background-image: url("yritystausta.jpg");
-    padding: 20px;
+.main{
+    color: #ddd;
+    height: 550px;
+    background-color:#43a1e8;
+    padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
-    width: 98%;
-    height: auto;
+    width: 99%;
     background-repeat: no-repeat;
-    overflow: hidden;
-    margin: 0,0,0,0;
+    border: solid #000000 1px;
+
     
 }
 button {
@@ -48,23 +56,25 @@ button {
     margin-top: 3%;
     border-collapse: collapse;
     border-spacing: 0;
-    border: 1px solid #ddd;
+    border: 1px solid black;
     width: 80%;
     font-family:'Geneva', sans-serif;
     font-size: large;
 }
             
 th {
+    border: solid #000000 1px;
     background: #fa52fa;
-    background-image: -webkit-linear-gradient(top, #fa52fa78, #43a1e884);
-    background-image: -moz-linear-gradient(top, #fa52fa78, #43a1e884);
-    background-image: -ms-linear-gradient(top, #fa52fa78, #43a1e884);
-    background-image: -o-linear-gradient(top, #fa52fa78, #43a1e884);
-    background-image: linear-gradient(to top, #fa52fa78, #43a1e884);
+    background-image: -webkit-linear-gradient(top, #fa52fa, #43a1e8);
+    background-image: -moz-linear-gradient(top, #fa52fa, #43a1e8);
+    background-image: -ms-linear-gradient(top, #fa52fa, #43a1e8);
+    background-image: -o-linear-gradient(top, #fa52fa, #43a1e8);
+    background-image: linear-gradient(to bottom, #fa52fa, #43a1e8);
     text-align: left;
     padding: 16px;
 }
 td {
+    border: solid #000000 1px;
     color:#000000;
     text-align: left;
     padding: 16px;
