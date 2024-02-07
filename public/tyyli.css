@@ -2,24 +2,25 @@
 .header{
     background-image: url("yritystausta.jpg");
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 5px;
-    height: 175px;
+    height: 210px;
     width:99%;
     color: white;
     border: solid #000000 1px;
     font-size: x-large;
     background: #fd65fd;
-    background-image: -webkit-linear-gradient(top, #fa52fa, #43a1e8);
-    background-image: -moz-linear-gradient(top, #fa52fa, #43a1e8);
-    background-image: -ms-linear-gradient(top, #fa52fa, #43a1e8);
-    background-image: -o-linear-gradient(top, #fa52fa, #43a1e8);
-    background-image: linear-gradient(to bottom, #fa52fa, #43a1e8);
+    background-image: -webkit-linear-gradient(top, #fa52fa, #80c2f5);
+    background-image: -moz-linear-gradient(top, #fa52fa, #80c2f5);
+    background-image: -ms-linear-gradient(top, #fa52fa, #80c2f5);
+    background-image: -o-linear-gradient(top, #fa52fa, #80c2f5);
+    background-image: linear-gradient(to bottom, #fa52fa, #80c2f5);
 }
 .main{
-    color: #ddd;
-    height: 550px;
-    background-color:#43a1e8;
-    padding: 5px;
+    background-image: url(voikukka.png);
+    background-position: right;
+    color: #000000;
+    height: 580px;
+    background-color:#80c2f5;
+    padding-top: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     width: 99%;
@@ -51,13 +52,13 @@ button {
     text-decoration: none;
   }
   table {
-    color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
     margin-left: 7%;
     margin-top: 3%;
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid black;
-    width: 80%;
+    width: 70%;
     font-family:'Geneva', sans-serif;
     font-size: large;
 }
@@ -74,15 +75,49 @@ th {
     padding: 16px;
 }
 td {
+    background-color: #fce2f9c0;
     border: solid #000000 1px;
-    color:#ffffff;
+    color:#000000;
     text-align: left;
-    padding: 16px;
+    padding: 20px;
 }
 tr:nth-child(even) {
-    background-color: rgba(191, 217, 249, 0.319);
+    background-color: rgba(0, 109, 241, 0.578);
 }
 p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
+}
+.bt {
+    font-size: small;
+    padding: 7px;
+}
+.black-mode {
+    background-image: url(dark.png);
+    background-position:right;
+    background-size: 450px;
+    color: #fdfafa;
+    height: 580px;
+    background-color:#000000;
+    padding-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    width: 99%;
+    background-repeat: no-repeat;
+    border: solid #000000 1px;
+}
+.black-mode1 {
+    background-image: url("yritystausta.jpg");
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 210px;
+    width:99%;
+    color: white;
+    border: solid #000000 1px;
+    font-size: x-large;
+    background: #fd65fd;
+    background-image: -webkit-linear-gradient(top, #ada6ad, #040404);
+    background-image: -moz-linear-gradient(top, #ada6ad, #040404);
+    background-image: -ms-linear-gradient(top, #ada6ad, #040404);
+    background-image: -o-linear-gradient(top, #ada6ad, #040404);
+    background-image: linear-gradient(top, #ada6ad, #040404);
 }
