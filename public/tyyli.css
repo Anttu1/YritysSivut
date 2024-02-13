@@ -1,7 +1,5 @@
 
 .header{
-    background-image: url("yritystausta.jpg");
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     height: 210px;
     width:99%;
     color: white;
@@ -95,7 +93,6 @@ p {
 .black-mode {
     background-image: url(dark.png);
     background-position:right;
-    background-size: 450px;
     color: #fdfafa;
     height: 580px;
     background-color:#000000;
@@ -107,8 +104,6 @@ p {
     border: solid #000000 1px;
 }
 .black-mode1 {
-    background-image: url("yritystausta.jpg");
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     height: 210px;
     width:99%;
     color: white;
